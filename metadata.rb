@@ -8,8 +8,8 @@ version          '0.1.0'
 
 supports         'windows', '>= 6.3'
 
-source_url       'https://github.com/DimensionDataDevOps/dsc' if respond_to?(:source_url)
-issues_url       'https://github.com/DimensionDataDevOps/dsc/issues' if respond_to?(:issues_url)
+source_url       'https://github.com/DimensionDataDevOps/dsc2' if respond_to?(:source_url)
+issues_url       'https://github.com/DimensionDataDevOps/dsc2/issues' if respond_to?(:issues_url)
 
 depends          'windows', '~> 1.39.2'
 depends          'powershell', '~> 3.2.3'
