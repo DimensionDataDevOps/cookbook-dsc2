@@ -1,4 +1,4 @@
-name             'dsc'
+name             'dsc2'
 maintainer       'Dimension Data Cloud Solutions, Inc.'
 maintainer_email 'eugene.narciso@itaas.dimensiondata.com'
 license          'Apache 2.0'

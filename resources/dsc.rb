@@ -1,5 +1,5 @@
 #
-# Cookbook Name:: dsc
+# Cookbook Name:: dsc2
 # Resource:: dsc
 # Author:: Eugene Narciso (<eugene.narciso@itaas.dimensiondata.com>)
 #
