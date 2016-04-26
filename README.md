@@ -21,21 +21,19 @@ Requirements
 Usage
 -----
 #### dsc2::default
-Add `include_recipe dsc2::default` in your recipe to make sure that WFM 5.0 and .NET 4.6.1 is installed.
+Add `include_recipe dsc2::default` in your recipe to make sure that WFM 5.0 and .NET 4.6.1 are installed.
 
 #### Example
-Example recipe that checks if PowerShell 5.0 and .NET 4.6.1 is installed first before running the `dsc` custom resource
+Example recipe that checks if PowerShell 5.0 and .NET 4.6.1 are installed first before running the `dsc` custom resource
 
 ```
 chk_posh = powershell_out!("$PSVersionTable.PSVersion.Major -ge '5'")
 chk_reg = powershell_out!('(Get-ItemProperty -Path Registry::\'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\').Release')
 
 if !chk_posh.stdout.include?('True')
-#elsif!chk_reg.stdout >= '394254'
   include_recipe 'dsc2'
-# else
-#   Chef::Log.info('WFM 5.0 and .NET 4.6.1 or above are installed, skipping')
-# end
+else
+  Chef::Log.info('WFM 5.0 and .NET 4.6.1 or above are installed, skipping')
 end
 
 dsc 'OctopusProjectsDSC' do
