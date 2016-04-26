@@ -1,4 +1,4 @@
-dsc Cookbook
+dsc2 Cookbook
 ============
 Install DSC Modules from powershellgallery.com
 
