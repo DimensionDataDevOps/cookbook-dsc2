@@ -35,8 +35,8 @@ def whyrun_supported?
   true
 end
 
-action :install do 
+action :install do
   config_provider(pkg_provider)
-  shellout = powershell_out!("Install-Module -Name #{name}")
-  Chef::Log.debug(shellout.stdout)
+  install_module = powershell_out!("Install-Module -Name #{name}")
+  Chef::Log.debug(install_module.stdout)
 end
